@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PierresSavoryAndSweet.Models.Flavor
+
+<h2>Add a new flavor</h2>
+<div class="main">
+  @using (Html.BeginForm())
+  {
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+    <input type="submit" value="Add a new flavor" class="btn btn-submit">
+  }
+</div>

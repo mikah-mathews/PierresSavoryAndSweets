@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+@model PierresSavoryAndSweet.Models.Flavor;
+
+<h2>Flavor Details</h2>
+<div class="main">
+  <h3>@Html.DisplayNameFor(m => m.Name): @Html.DisplayFor(m => m.Name)</h3>
+
+  @if(@Model.JoinEntities.Count == 0)
+  {
+    <p>This flavor does not include any treats</p>
+  }
+  else 
+  {
+    <h4>Treats this flavor is available in</h4>
+    <ul>
+      @foreach(var join in Model.JoinEntities)
+      {
+        <li>@Html.ActionLink($"{join.Treat.Name}", "Details", "Treats", new { id = join.Treat.TreatId})</li>
+      }
+    </ul>
+  }
+</div>
