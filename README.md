@@ -27,12 +27,13 @@ __
                 "DefaultConnection": "Server=localhost;Port=3306;database=[NAME-OF-THE-DATABASE-YOU-CREATED-ABOVE];uid=root;pwd=[YOUR-PASSWORD-HERE];"
             }
         }`
-5. Create your own database from the .sql file located in the projects top most level by following these steps: 
+5. Create your own database by following these steps: 
   
-    1. Type "dotnet restore" in Terminal then hit enter
-    2. Enter "dotnet build" to Terminal
-    3. Type "dotnet ef migration add InitialCreate" followed by enter
-    4. Type "dotnet ef database update" then hit enter    
+    1. Navigate to the PierresSavoryAndSweet folder
+    2. Type "dotnet restore" in Terminal then hit enter
+    3. Enter "dotnet build" to Terminal
+    4. Type "dotnet ef migrations add InitialCreate" followed by enter
+    5. Type "dotnet ef database update" then hit enter    
 6. Once in the project's production folder, type "dotnet watch run" in the terminal - then navigate to your web browser and type http://localhost:5000/ in your url bar to see the application.
   
 ## Known Bugs

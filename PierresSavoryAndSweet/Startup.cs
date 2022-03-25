@@ -42,15 +42,12 @@ namespace PierresSavoryAndSweet
         options.Password.RequireUppercase = false;
         options.Password.RequiredUniqueChars = 0;
       });
-
-      public void Configure(IApplicationBuilder app)
+    }
+    public void Configure(IApplicationBuilder app)
     {
       app.UseDeveloperExceptionPage();
-
-      app.UseAuthentication(); 
-
+      app.UseAuthentication();
       app.UseRouting();
-
       app.UseAuthorization();
 
       app.UseEndpoints(routes =>
@@ -62,7 +59,7 @@ namespace PierresSavoryAndSweet
       
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Hello World!");
+        await context.Response.WriteAsync("These are not the droids you're looking for!");
       });
     }
   }
