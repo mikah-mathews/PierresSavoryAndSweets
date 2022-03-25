@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@using PierresSavoryAndSweet.Models;
+@model List<PierresSavoryAndSweet.Models.Treat>
+
+  <h1>Treats for @User.Identity.Name</h1>
+  <div class="main">
+    @if (Model.Any()) 
+    {
+      <div class="main">
+        <ul>
+          @foreach (Treat treat in Model)
+          {
+            <li>@Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId })</li>
+          }
+        </ul>
+      </div>
+    }
+    else 
+    {  
+      <h3>No treats have been added as of yet</h3>  
+       @Html.ActionLink("Add new treat", "Create", "Treats")
+    }
+  </div>

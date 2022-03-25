@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PierresSavoryAndSweet.Models.Treat
+
+<h2>Add a new treat</h2>
+  <div class="main">
+    @using (Html.BeginForm())
+    {
+      @Html.LabelFor(m => m.Name)
+      @Html.TextBoxFor(m => m.Name, new { @required="true"})
+
+      @Html.LabelFor(m => m.Price)
+      @Html.TextAreaFor(m => m.Price, new { @required="true"})
+
+      @Html.Label("Select Flavor: ")
+      @Html.DropDownList("FlavorId", string.Empty)
+
+
+      <input type="submit" value="Add new Treat" class="btn btn-submit" />
+    }
+</div>
