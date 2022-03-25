@@ -1,0 +1,19 @@
+@model PierresSavoryAndSweet.Models.Treat
+
+<h2>Edit</h2>
+
+<h4>Edit this Treat: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(m => m.Name)
+  @Html.TextBoxFor(m => m.Name, new { @required="true"})
+
+  @Html.LabelFor(m => m.Price)
+  @Html.TextBoxFor(m => m.Price, new { @required="true"})
+
+  @Html.Label("Select Flavor: ")
+  @Html.DropDownList("FlavorId", string.Empty)
+
+  <input type="submit" value="Save" />
+}

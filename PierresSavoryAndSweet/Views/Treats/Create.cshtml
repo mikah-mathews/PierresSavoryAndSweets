@@ -12,7 +12,7 @@
       @Html.TextBoxFor(m => m.Name, new { @required="true"})
 
       @Html.LabelFor(m => m.Price)
-      @Html.TextAreaFor(m => m.Price, new { @required="true"})
+      @Html.TextBoxFor(m => m.Price, new { @required="true"})
 
       @Html.Label("Select Flavor: ")
       @Html.DropDownList("FlavorId", string.Empty)
