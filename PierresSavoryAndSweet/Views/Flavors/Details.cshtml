@@ -3,8 +3,9 @@
 }
 @model PierresSavoryAndSweet.Models.Flavor;
 
-<h2>Flavor Details</h2>
+
 <div class="main">
+  <h2>Flavor Details</h2>
   <h3>@Html.DisplayNameFor(m => m.Name): @Html.DisplayFor(m => m.Name)</h3>
 
   @if(@Model.JoinEntities.Count == 0)

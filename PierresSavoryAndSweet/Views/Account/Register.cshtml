@@ -5,18 +5,20 @@
 @using PierresSavoryAndSweet.ViewModels
 @model RegisterViewModel
 
-<h2>Register a new user</h2>
-<hr/>
-@using (Html.BeginForm("Register", "Account", FormMethod.Post))
-{
-  @Html.LabelFor(user => user.Email)
-  @Html.TextBoxFor(user => user.Email)
+<div class="main">
+  <h2>Register a new user</h2>
+  <hr/>
+  @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+  {
+    @Html.LabelFor(user => user.Email)
+    @Html.TextBoxFor(user => user.Email)
 
-  @Html.LabelFor(user => user.Password)
-  @Html.PasswordFor(user => user.Password)
+    @Html.LabelFor(user => user.Password)
+    @Html.PasswordFor(user => user.Password)
 
-  @Html.LabelFor(user => user.ConfirmPassword)
-  @Html.PasswordFor(user => user.ConfirmPassword)
+    @Html.LabelFor(user => user.ConfirmPassword)
+    @Html.PasswordFor(user => user.ConfirmPassword)
 
-  <input type="submit" value="register" />
-}
+    <input type="submit" value="register" />
+  }
+</div>
